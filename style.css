@@ -1,0 +1,199 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+/*========= background video css ===============*/
+
+/*header設定*/
+#header {
+    position: relative;
+    /*h1-center-relative*/
+    height: 100vh;
+
+}
+
+#video-area {
+    position: fixed;
+    z-index: -1;
+    /*layer*/
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#video {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh;
+    /* 16:9 width→16 ÷ 9＝ 177.77% */
+    height: 56.25vw;
+    /* 16:9width → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/*title*/
+h1 {
+    font-family: 'Poppins', serif;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    /*position*/
+    position: absolute;
+    /*center*/
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    /*color*/
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    /* Apply the fade-in animation */
+    /* Initially set opacity to 0 */
+}
+
+a {
+    color: black
+}
+
+
+
+
+/*========= layout ===============*/
+
+#container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+
+}
+
+
+
+
+
+/* Add some basic styling */
+body {
+    font-family: "poppins", sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Style for the deer container */
+#deerList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Allow items to wrap to the next line if needed */
+    gap: 50px;
+    /* Add some space between items */
+    padding-right: 10px;
+    padding-top: 30px;
+
+    /* Adjust padding for better appearance */
+}
+
+/* Style for each deer element */
+.deerElement {
+    text-align: center;
+    /* Center the text */
+    opacity: 0;
+    /* Initially set opacity to 0 */
+    animation: fadeIn 1s ease-in-out forwards;
+    /* Apply the fade-in animation */
+    transition: transform 0.2s ease-in-out;
+    /* Add transition for smooth zoom effect */
+}
+
+/* Zoom effect on hover */
+.deerElement:hover {
+    transform: scale(1.1);
+    /* Zoom in by 10% on hover */
+}
+
+/* Style for the deer image */
+.deerImage {
+    width: 200px;
+    /* Set a fixed width for the image */
+    height: 200px;
+    /* Set a fixed height for the image */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+    border-radius: 50%;
+    /* Make the image circular (optional) */
+}
+
+
+
+.vertical-line {
+    position: fixed;
+    top: 90%;
+    bottom: 5%;
+    left: 50%;
+    width: 1px;
+    background-color: #ffffff;
+    /* Change the color of the line */
+    z-index: 9999;
+}
+
+.scroll-indicator {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #ffffff;
+    /* Change the color of the text */
+    transition: opacity 0.5s ease;
+    /* Add transition for smooth hiding */
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* Keyframe animation for fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    height: 50px;
+}
+
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+
+    /* Adjust styles for smaller screens */
+    footer {
+        padding: 8px;
+    }
+}
+
+
+#contentSection{
+    padding-top:50px;
+}
+#contentSection p {
+    color: rgb(185, 185, 185);
+    font-size: 0.5 rem;
+    /* Set the font size for paragraphs */
+    line-height: 1.5;
+    /* Set the line height for better readability */
+}

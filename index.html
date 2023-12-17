@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Deer List</title>
+    <meta name="description" content="Deer List">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>DEER LIST</h1>
+        <div id="video-area">
+            <video id="video" poster="./assets/deer.jpg" muted autoplay loop>
+                <source src="./assets/a-herd-of-deer-in-the-forest-2023-11-27-04-56-13-utc.mp4" type="video/mp4">
+                <p>Your browser does not support the video element. </p>
+            </video>
+            <!--/video-area-->
+        </div>
+        <audio autoplay controls>
+            <source src="./assets/Ambience.mp3" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Vertical Line -->
+        <div class="vertical-line" id="verticalLine"></div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" id="scrollIndicator">Scroll down</div>
+
+    </header>
+    <div id="container">
+        <h2>DEER LIST</h2>
+        <!-- Container to display deer names -->
+        <div id="deerList"></div>
+        <section id="contentSection"></section> 
+    </div>
+    <!-- Content generated using a for loop -->
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
